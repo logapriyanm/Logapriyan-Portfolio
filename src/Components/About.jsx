@@ -1,4 +1,5 @@
-import Profile from '../assets/images/logo.jpg';
+// import Profile from '../assets/images/logo.jpg';
+import Profile1 from '../assets/images/portfolio.png'
 import { MdFileDownload } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
 import Resume from '/loki.resume.pdf';
@@ -35,7 +36,7 @@ const About = () => {
 
         <div className="w-full md:w-1/2 flex justify-center md:m-10 md:justify-center ">
 
-          <img src={Profile} alt="profile" className='w-80 h-80  md:w-80 md:h-80  rounded-full border-2 border-white p-2' />
+          <img src={Profile1} alt="profile" className='w-80 h-80  md:w-80 md:h-80  rounded-full border-2 border-white p-2' />
         </div>
       </div>
 

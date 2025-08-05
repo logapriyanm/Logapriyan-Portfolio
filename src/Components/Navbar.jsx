@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import Logo from '../assets/images/logo.jpg';
 import { RiMenuFoldFill } from "react-icons/ri";
+import Profile1 from '../assets/images/portfolio.png'
+
 
 const Navbar = () => {
     const [toggleMenu,setToggleMenu] = useState(false);
     return (
         <header className='flex justify-between bg-[#0f172a] p-1.5 fixed top-0 right-0 left-0 z-50 '>
-            <img src={Logo} alt="Logo" className="h-10 w-10 rounded-4xl p-1  ml-5 border-2 border-white" />
+            <img src={Profile1} alt="Logo" className="h-10 w-10 rounded-4xl p-1  ml-5 border-2 border-white" />
             <nav className=" navbar hidden md:block sticky top-0 left-0 z-(100)">
             <ul className=" flex gap-20 mr-10 mt-2 text-[15px]  font-semibold text-white">
                 <li><a href="#home">Home</a></li>

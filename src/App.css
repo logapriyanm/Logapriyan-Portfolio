@@ -48,7 +48,7 @@ html {
 }
 
 .headName {
- @apply  md:text-8xl md:font-semibold md:text-center md:text-white  font-medium text-5xl    text-white font-secondary 
+ @apply  md:text-8xl md:font-semibold md:text-center md:text-white  font-semibold text-5xl    text-white font-secondary 
  hover:text-hoverPrime   hover:cursor-pointer
 }
 
