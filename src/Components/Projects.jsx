@@ -1,11 +1,12 @@
 import { useState, useRef } from "react"
 
 import Html from '../assets/images/Chronoloki.png';
-import Html1 from '../assets/images/lokitech.png'
-import Html2 from '../assets/images/samport.png'
-import Javascript from '../assets/images/stickynotels.png'
-import Javascript1 from '../assets/images/passgen.png'
-import Javascript2 from '../assets/images/Calculator.png'
+import Html1 from '../assets/images/lokitech.png';
+import Html2 from '../assets/images/samport.png';
+import Javascript from '../assets/images/stickynotels.png';
+import Javascript1 from '../assets/images/passgen.png';
+import Javascript2 from '../assets/images/Calculator.png';
+import WeatherApp from '../assets/images/WeatherApp.png';
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
@@ -38,16 +39,16 @@ const projects = [
     demoLink: "https://logapriyanm.github.io/Calculator/",
     codeLink: "https://github.com/logapriyanm/Calculator"
   },
-  // {
-  //   title: "Sample Portfolio",
-  //   description:
-  //     "Intuitive task management application with drag-and-drop functionality, team collaboration, and progress tracking features.",
-  //   image: Html2,
-  //   tags: ["Html", "Css", "Bootstrap"],
-  //   category: "frontend",
-  //   demoLink: "https://logapriyanm.github.io/Portfolio-sample/",
-  //   codeLink: "https://github.com/logapriyanm/Portfolio-sample"
-  // },
+  {
+    title: "Weather App",
+    description:
+      "A responsive React-based weather application that displays real-time weather data, including temperature, humidity, wind speed, and location coordinates.",
+    image: WeatherApp,
+    tags: ["Html", "Css", "Tailwind Css","JavaScript","React"],
+    category: "frontend",
+    demoLink: "https://weather-app-loki.onrender.com",
+    codeLink: "https://github.com/logapriyanm/Weather-App-Loki.git"
+  },
   {
     title: "Watch Shop",
     description:
