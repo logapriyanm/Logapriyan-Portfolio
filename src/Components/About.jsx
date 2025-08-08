@@ -2,7 +2,7 @@
 import Profile1 from '../assets/images/portfolio.png'
 import { MdFileDownload } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
-import Resume from '/loki.resume.pdf';
+import Resume from '/logapriyan-resume.pdf';
 
 
 const About = () => {
