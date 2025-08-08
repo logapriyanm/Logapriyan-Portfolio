@@ -14,16 +14,12 @@ const About = () => {
       <div className="flex justify-center flex-col md:flex-row  items-center md:items-start w-full ">
         <div className="w-full md:w-1/2 mx-10  md:m-15 flex flex-col items-center text-center md:text-left px-4">
           <h1 className=' text-3xl md:text-4xl font-bold md:font-extra font-poppins self-start text-white  mb-4  text-left  '>ABOUT ME</h1 >
-          <p className='text-sm md:text-base md:font-poppins text-white mb-6 leading-6 text-left  '  >    I'm a passionate and 
-            detail-oriented <b className='text-normal md:font-poppins  text-xl'>Junior Web Developer</b> with a
-            strong foundation in HTML, CSS, Tailwind Css, JavaScript, and
-            React.js. I specialize in creating responsive, user-friendly
-            interfaces that deliver seamless digital experiences. I'm
-            continuously learning and expanding my skill set, with a strong
-            interest in modern front-end development and performance
-            optimization. Whether working independently or collaborating on a
-            team, I bring creativity, curiosity, and dedication to every
-            project I take on.
+          <p className='text-sm md:text-base md:font-poppins text-white mb-6 leading-6 text-left  '  > Frontend Web Developer with hands-on 
+            experience in building responsive and user-friendly web interfaces using HTML, CSS, JavaScript, Tailwind CSS, and React.js. 
+            Strong understanding of modern web development principles and UI/UX best practices. Passionate about continuous learning and 
+            keeping up with evolving frontend technologies. Seeking an opportunity to contribute to impactful web projects and grow as a
+             developer in a collaborative environment.
+
           </p>
 
           <a href={Resume} download={Resume}><button className='flex items-center   px-2 py-1 mb-5  md:px-2 md:py-1.5      bg-blue-700  text-white rounded-lg
@@ -40,7 +36,7 @@ const About = () => {
         </div>
       </div>
 
-{/* Social links */}
+      {/* Social links */}
 
       <div className="mt-5 md:mb-10 text-center" >
         <h1 className="text-white text-xl md:font-extra font-poppins mb-2 ">Check Out My</h1>

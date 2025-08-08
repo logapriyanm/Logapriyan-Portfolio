@@ -2,8 +2,8 @@ import { useState, useRef } from "react"
 
 import Html from '../assets/images/Chronoloki.png';
 import Html1 from '../assets/images/lokitech.png';
-import Html2 from '../assets/images/samport.png';
-import Javascript from '../assets/images/stickynotels.png';
+// import Html2 from '../assets/images/samport.png';
+// import Javascript from '../assets/images/stickynotels.png';
 import Javascript1 from '../assets/images/passgen.png';
 import Javascript2 from '../assets/images/Calculator.png';
 import WeatherApp from '../assets/images/WeatherApp.png';
@@ -66,8 +66,8 @@ const projects = [
     image: Javascript1,
     tags: ["Html", "Css", "Javascript"],
     category: "frontend",
-    demoLink: "https://watchworld.demo",
-    codeLink: "https://github.com/user/watchworld",
+    demoLink: "https://logapriyanm.github.io/Pass-Generator/",
+    codeLink: "https://github.com/logapriyanm/Pass-Generator.git",
   },
   // {
   //   title: "StickyNotes",
@@ -115,6 +115,7 @@ const ProjectCard = ({ title, description, image, tags, demoLink, codeLink }) =>
         </span>
       ))}
     </div>
+    
   </div>
 );
 
@@ -146,7 +147,7 @@ const Projects = () => {
       : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <div id="projects" className="min-h-screen bg-gradient-to-r from-primary to-secondary py-10">
+    <div id="projects" className="min-h-screen bg-gradient-to-r flex flex-col items-center from-primary to-secondary py-10">
       <h1 className="md:text-4xl text-3xl font-bold text-white md:font-extra font-poppins text-center md:m-15 mb-4">Projects</h1>
 
       {/* Filter Buttons */}
@@ -211,6 +212,12 @@ const Projects = () => {
           onClick={() => slideOnce("right")}
           className="absolute right-0 top-0 h-full w-[50px] z-10 cursor-e-resize"
         />
+      </div>
+
+      <div className="m-10">
+       <a href="https://github.com/logapriyanm?tab=repositories">
+        <button className="px-3 py-2 hover:bg-blue-800 border-2 rounded-2xl border-blue-700  text-white bg-blue-700 text-xl font-extra font-bold">
+          Click to View All Projects  </button></a>
       </div>
 
     </div>

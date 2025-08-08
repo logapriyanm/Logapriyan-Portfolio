@@ -2,6 +2,7 @@ import Certificate1 from '../assets/images/NxtLogic.jpg'
 import Certificate2 from '../assets/images/frontend.png'
 import Certificate3 from '../assets/images/UIUX.png'
 import Certificate4 from '../assets/images/api skills.png'
+import Certificate5 from '../assets/images/Tech vedha.png'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
@@ -25,16 +26,17 @@ const MySkills = [
 // Skills data
 
 const data = [
+      {
+        name: 'Web Development – Tech Vedhu',
+        image: Certificate5,
+        content: 'Completed an intensive course covering core web development concepts and best practices (June–July 2025).'
+    },
     {
         name: 'Nxtlogic Internship',
         image: Certificate1,
         content: 'Completed a front-end internship focused on real-time projects and team collaboration.'
     },
-    {
-        name: 'Frontend Developer ',
-        image: Certificate2,
-        content: 'Certified for completing a comprehensive front-end development program.'
-    },
+   
     {
         name: 'UI/UX Design Training',
         image: Certificate3,
@@ -45,6 +47,12 @@ const data = [
         image: Certificate4,
         content: 'Gained experience in building and integrating RESTful APIs.'
     },
+     {
+        name: 'Frontend Bootcamp ',
+        image: Certificate2,
+        content: 'Certified for completing a comprehensive front-end development program.'
+    },
+  
 ];
 
 // Skills left side
