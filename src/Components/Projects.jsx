@@ -7,6 +7,7 @@ import Html1 from '../assets/images/lokitech.png';
 import Javascript1 from '../assets/images/passgen.png';
 import Javascript2 from '../assets/images/Calculator.png';
 import WeatherApp from '../assets/images/WeatherApp.png';
+import Orphanage from '../assets/images/Orphnage.png';
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
@@ -19,22 +20,23 @@ import { Navigation } from 'swiper/modules';
 
 
 const projects = [
-  {
-    title: "Loki Technologies",
+    {
+    title: "Orphanage Management System",
     description:
-      "It features clean structure, bold typography, and a futuristic tech aesthetic—designed to impress and built to perform on all devices.",
-    image: Html1,
-    tags: ["Html", "Css", "Bootstrap"],
+      "A responsive React.js + Tailwind CSS web application for a non-profit organization, featuring dynamic content, an interactive donation system, volunteer sign-up, and contact management to support child welfare initiatives.",
+    image: Orphanage,
+    tags: ["HTML", "Tailwind CSS", "JavaScript","React"],
     category: "frontend",
-    demoLink: " https://logapriyanm.github.io/LOKI-Technologies/",
-    codeLink: "https://github.com/logapriyanm/LOKI-Technologies"
+    demoLink: " https://orphanage-management-system-kxtd.onrender.com",
+    codeLink: "https://github.com/logapriyanm/Orphanage-Management-System.git"
   },
+  
   {
     title: "Calculator",
     description:
       "A responsive web calculator built with  Supports keyboard input, handles real-time calculations, and blocks invalid characters. Designed for clean usability and smooth interaction.",
     image: Javascript2,
-    tags: ["Html", "Css","Javascript"],
+    tags: ["HTML", "CSS","Javascript"],
     category: "frontend",
     demoLink: "https://logapriyanm.github.io/Calculator/",
     codeLink: "https://github.com/logapriyanm/Calculator"
@@ -44,17 +46,27 @@ const projects = [
     description:
       "A responsive React-based weather application that displays real-time weather data, including temperature, humidity, wind speed, and location coordinates.",
     image: WeatherApp,
-    tags: ["Html", "Css", "Tailwind Css","JavaScript","React"],
+    tags: ["HTML", "Tailwind CSS","JavaScript","React"],
     category: "frontend",
     demoLink: "https://weather-app-loki.onrender.com",
     codeLink: "https://github.com/logapriyanm/Weather-App-Loki.git"
+  },
+  {
+    title: "Loki Technologies",
+    description:
+      "It features clean structure, bold typography, and a futuristic tech aesthetic—designed to impress and built to perform on all devices.",
+    image: Html1,
+    tags: ["HTML","Bootstrap"],
+    category: "frontend",
+    demoLink: " https://logapriyanm.github.io/LOKI-Technologies/",
+    codeLink: "https://github.com/logapriyanm/LOKI-Technologies"
   },
   {
     title: "Watch Shop",
     description:
       "A sleek and modern landing page for a premium watch store, highlighting luxury, technology, and elegance. Built with HTML, CSS, and Bootstrap for a clean and engaging user experience.",
     image: Html,
-    tags: ["Html", "Css", "Bootstrap"],
+    tags: ["HTML","Bootstrap"],
     category: "frontend",
     demoLink: "https://logapriyanm.github.io/Chrono-LOGI/",
     codeLink: "https://github.com/logapriyanm/Chrono-LOGI",
@@ -64,7 +76,7 @@ const projects = [
     description:
       "A simple yet powerful JavaScript-based password generator that lets users customize password length and include numbers, capital/small letters, and symbols.",
     image: Javascript1,
-    tags: ["Html", "Css", "Javascript"],
+    tags: ["HTMl", "CSS", "Javascript"],
     category: "frontend",
     demoLink: "https://logapriyanm.github.io/Pass-Generator/",
     codeLink: "https://github.com/logapriyanm/Pass-Generator.git",
