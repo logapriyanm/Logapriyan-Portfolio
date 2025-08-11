@@ -97,7 +97,7 @@ const projects = [
 // Project Card component
 
 const ProjectCard = ({ title, description, image, tags, demoLink, codeLink }) => (
-  <div className="bg-[#334155] hover:bg-[#1f2937] rounded-xl overflow-hidden shadow-md p-4 flex flex-col h-[450px] ">
+  <div className="bg-[#334155] hover:bg-[#1f2937] rounded-xl overflow-hidden shadow-md p-4 flex flex-col sm:m-10 md:m-auto md:h-[450px] h-[500px]">
 
     <div className="relative  w-full  group">
       <img src={image} alt={title} className="rounded-lg w-full  object-cover md:h-[200px]" />
@@ -180,7 +180,7 @@ const Projects = () => {
 
       
       {/* Swiper with double-hover zones */}
-      <div className="relative max-w-[1200px] mx-auto overflow-hidden">
+      <div className="relative md:max-w-[1200px] max-w-[300px]  mx-auto overflow-hidden">
         {/* Double Hover Left Zone */}
         <div
           onClick={() => slideOnce("left")}
@@ -205,7 +205,7 @@ const Projects = () => {
         >
           {filteredProjects.map((project, index) => (
             <SwiperSlide key={index}>
-              <div className="h-full flex justify-center">
+              <div className="h-full  flex justify-center">
                 <ProjectCard
                   title={project.title}
                   description={project.description}
@@ -222,14 +222,14 @@ const Projects = () => {
         {/* Double Hover Right Zone */}
         <div
           onClick={() => slideOnce("right")}
-          className="absolute right-0 top-0 h-full w-[50px] z-10 cursor-e-resize"
+          className="absolute right-0 top-0 h-full w-[50px] z-10 cursor-pointer"
         />
       </div>
 
       <div className="m-10">
        <a href="https://github.com/logapriyanm?tab=repositories">
-        <button className="px-3 py-2 hover:bg-blue-800 border-2 rounded-2xl border-blue-700  text-white bg-blue-700 text-xl font-extra font-bold">
-          Click to View All Projects  </button></a>
+        <button className="px-3 py-2 hover:bg-blue-800 border-2 rounded-lg border-blue-700  text-white bg-blue-700 text-base md:text-xl font-primary font-medium">
+           View All Projects  </button></a>
       </div>
 
     </div>
