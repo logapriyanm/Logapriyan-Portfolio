@@ -11,15 +11,18 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { FaHtml5, FaCss3Alt, FaNodeJs, FaReact } from "react-icons/fa";
-import { SiJavascript, SiTailwindcss } from "react-icons/si";
+import { SiJavascript, SiTailwindcss,SiExpress  } from "react-icons/si";
+import { DiMongodb } from "react-icons/di";
 
 const MySkills = [
     { name: "HTML", label: "Structure", icon: <FaHtml5 className="text-[#E44D26]" /> },
     { name: "CSS", label: "User Interface", icon: <FaCss3Alt className="text-blue-500" /> },
     { name: "TailwindCSS", label: "User Interface", icon: <SiTailwindcss className="text-sky-400" /> },
     { name: "JavaScript", label: "Interaction", icon: <SiJavascript className="text-yellow-400" /> },
-    { name: "React", label: "Framework", icon: <FaReact className="text-cyan-400 " /> },
+    { name: "React JS", label: "Framework", icon: <FaReact className="text-cyan-400 " /> },
     { name: "NodeJS", label: "Web Server", icon: <FaNodeJs className="text-green-500  " /> },
+    { name: "Express JS", label: "Server Framework", icon: <SiExpress size={40} className="text-white bg-black rounded-full p-2" /> },
+    { name: "Mongo DB", label: " Database", icon: <DiMongodb className="text-[#4db33d] " /> },
 ]
 
 
@@ -64,7 +67,7 @@ const Skills = () => {
                 <h1 className=" text-center pt-5">SKILLS</h1>
                 <div className=" p-5">
 
-                    <div className="grid grid-cols-1  md:grid-cols-2  gap-15">
+                    <div className="grid grid-cols-1  md:grid-cols-2  gap-5">
                         {MySkills.map((skill, index) => (
                             <div
                                 key={index}
