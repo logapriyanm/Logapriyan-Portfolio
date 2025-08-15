@@ -14,11 +14,8 @@ const About = () => {
       <div className="flex justify-center flex-col md:flex-row  items-center md:items-start w-full ">
         <div className="w-full md:w-1/2 mx-10  md:m-15 flex flex-col items-center text-center md:text-left px-4">
           <h1 className=' text-3xl md:text-4xl font-bold md:font-extra font-poppins self-start text-white  mb-4  text-left  '>ABOUT ME</h1 >
-          <p className='text-sm md:text-base md:font-poppins text-white mb-6 leading-6 text-left  '  > Frontend Web Developer with hands-on 
-            experience in building responsive and user-friendly web interfaces using HTML, CSS, JavaScript, Tailwind CSS, and React.js. 
-            Strong understanding of modern web development principles and UI/UX best practices. Passionate about continuous learning and 
-            keeping up with evolving frontend technologies. Seeking an opportunity to contribute to impactful web projects and grow as a
-             developer in a collaborative environment.
+          <p className='text-sm md:text-base md:font-poppins text-white mb-6 leading-6 text-left  '  >MERN Stack Developer with hands-on experience in building responsive, user-friendly web applications using HTML, CSS, JavaScript, Tailwind CSS, React.js, Node.js, Express.js, and MongoDB. Strong understanding of modern web development principles, RESTful APIs, and UI/UX best practices. Passionate about continuous learning and staying updated with evolving full-stack technologies. Seeking an opportunity to contribute to impactful projects and grow as a developer in a collaborative environment.
+            
 
           </p>
 
