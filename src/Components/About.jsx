@@ -1,8 +1,8 @@
 // import Profile from '../assets/images/logo.jpg';
-import Profile1 from '../assets/images/portfolio.png'
+import Profile1 from '/portfolio.png'
 import { MdFileDownload } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
-import Resume from '/logapriyan-resume.pdf';
+import Resume from '/Logapriyan.Resume.pdf';
 
 
 const About = () => {

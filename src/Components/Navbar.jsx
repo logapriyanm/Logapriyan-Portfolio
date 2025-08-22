@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Logo from '../assets/images/logo.jpg';
+
 import { RiMenuFoldFill } from "react-icons/ri";
-import Profile1 from '../assets/images/portfolio.png'
+import Profile1 from '/portfolio.png'
 
 
 const Navbar = () => {
