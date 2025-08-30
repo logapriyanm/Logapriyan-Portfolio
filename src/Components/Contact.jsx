@@ -145,7 +145,7 @@ const Contact = () => {
             type="submit"
             disabled={loading}
             className={`${loading ? "bg-blue-300 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"
-              } text-white px-6 py-3 rounded-lg flex items-center gap-2 transition duration-300  `}
+              } text-white px-6 py-3 rounded-lg flex items-center gap-2 transition duration-300 cursor-pointer `}
           >
             {loading ? "Sending..." : "Send Message"} <FaPaperPlane className={loading ? "animate-spin " : ""} />
           </button>

@@ -104,14 +104,14 @@ const ProjectCard = ({ title, description, image, tags, demoLink, codeLink }) =>
       <div className="absolute inset-0 bg-blue-400 hover:rounded flex justify-center items-center gap-4 opacity-0 group-hover:opacity-70 transition-opacity duration-300">
         {demoLink && (
           <a href={demoLink} target="_blank" rel="noopener noreferrer">
-            <button className="bg-white text-black p-3 rounded-full shadow hover:scale-110 transition">
+            <button className="bg-white text-black p-3 cursor-pointer rounded-full shadow hover:scale-110 transition">
               <FaExternalLinkAlt />
             </button>
           </a>
         )}
         {codeLink && (
           <a href={codeLink} target="_blank" rel="noopener noreferrer">
-            <button className="bg-white text-black p-3 rounded-full shadow hover:scale-110 transition">
+            <button className="bg-white text-black p-3 cursor-pointer rounded-full shadow hover:scale-110 transition">
               <FaGithub />
             </button>
           </a>
@@ -163,12 +163,12 @@ const Projects = () => {
       <h1 className="md:text-4xl text-3xl font-bold text-white md:font-extra font-poppins text-center md:m-15 mb-4">Projects</h1>
 
       {/* Filter Buttons */}
-      <div className="grid md:flex justify-center gap-4 mb-10 text-white font-medium">
+      <div className="grid md:flex justify-center gap-4 mb-10  text-white font-medium">
         {["all", "fullstack", "frontend", "backend"].map((cat) => (
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
-            className={`px-4 py-2 rounded-md transition-all duration-200 ${selectedCategory === cat ? "bg-blue-500 text-white" : "hover:text-blue-300"
+            className={`px-4 py-2 rounded-md cursor-pointer transition-all duration-200 ${selectedCategory === cat ? "bg-blue-500 text-white" : "hover:text-blue-300"
               }`}
           >
             {cat.charAt(0).toUpperCase() + cat.slice(1)}
@@ -228,7 +228,7 @@ const Projects = () => {
 
       <div className="m-10">
        <a href="https://github.com/logapriyanm?tab=repositories">
-        <button className="px-3 py-2 hover:bg-blue-800 border-2 rounded-lg border-blue-700  text-white bg-blue-700 text-base md:text-xl font-primary font-medium">
+        <button className="px-3 py-2 hover:bg-blue-800 border-2 rounded-lg border-blue-700 cursor-pointer  text-white bg-blue-700 text-base md:text-xl font-primary font-medium">
            View All Projects  </button></a>
       </div>
 
