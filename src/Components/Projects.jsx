@@ -8,6 +8,7 @@ import Javascript1 from '../assets/images/passgen.png';
 import Javascript2 from '../assets/images/Calculator.png';
 import WeatherApp from '../assets/images/WeatherApp.png';
 import Orphanage from '../assets/images/Orphnage.png';
+import BookBazaar from "../assets/images/BookBazaar.png"
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
@@ -30,7 +31,17 @@ const projects = [
     demoLink: " https://orphanage-management-system-kxtd.onrender.com",
     codeLink: "https://github.com/logapriyanm/Orphanage-Management-System.git"
   },
-  
+  {
+    title: "Book Bazaar",
+    description:
+      "A modern online bookstore web app where users can browse, search, and explore books with a clean UI and responsive design.",
+    image: BookBazaar,
+    tags: ["HTML","Tailwind CSS", "JavaScript","React"],
+    category: "frontend", 
+    demoLink: "https://book-bazaar-ovgc.onrender.com",
+    codeLink: "https://github.com/logapriyanm/Book-Bazaar.git",
+  },
+
   {
     title: "Calculator",
     description:
@@ -81,16 +92,7 @@ const projects = [
     demoLink: "https://logapriyanm.github.io/Pass-Generator/",
     codeLink: "https://github.com/logapriyanm/Pass-Generator.git",
   },
-  // {
-  //   title: "StickyNotes",
-  //   description:
-  //     "Intuitive task management application with drag-and-drop functionality, team collaboration, and progress tracking features.",
-  //   image: Javascript,
-  //   tags: ["React", "Redux", "Tailwind", "Framer Motion"],
-  //   category: "frontend", 
-  //   demoLink: "https://watchworld.demo",
-  //   codeLink: "https://github.com/user/watchworld",
-  // }
+  
 ];
 
 
