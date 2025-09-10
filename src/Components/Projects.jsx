@@ -9,6 +9,7 @@ import Javascript2 from '../assets/images/Calculator.png';
 import WeatherApp from '../assets/images/WeatherApp.png';
 import Orphanage from '../assets/images/Orphnage.png';
 import BookBazaar from "../assets/images/BookBazaar.png"
+import IntegratedFarm from "../assets/images/IntegratedFarm.png"
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
@@ -21,6 +22,16 @@ import { Navigation } from 'swiper/modules';
 
 
 const projects = [
+    {
+    title: "Logi Integrated Farm",
+    description:
+      "A 20-acre integrated agriculture and animal breeding farm showcasing sustainable crop cultivation, livestock management, fish breeding, and modern farmhouse facilities. Includes a modern website to explore farm sections, specialties, and book tours.",
+    image: IntegratedFarm,
+    tags: ["HTML", "Tailwind CSS", "JavaScript","React"],
+    category: "frontend",
+    demoLink: " https://logi-integrated-farm.onrender.com",
+    codeLink: "https://github.com/logapriyanm/Integrated-Farm.git"
+  },
     {
     title: "Orphanage Management System",
     description:
