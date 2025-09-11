@@ -10,7 +10,7 @@ import WeatherApp from '../assets/images/WeatherApp.png';
 import Orphanage from '../assets/images/Orphnage.png';
 import BookBazaar from "../assets/images/BookBazaar.png"
 import IntegratedFarm from "../assets/images/IntegratedFarm.png"
-import CrudApp from"../assets/images/CRUDAPP.png"
+import CrudApp from "../assets/images/CRUDAPP.png"
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
@@ -23,22 +23,22 @@ import { Navigation } from 'swiper/modules';
 
 
 const projects = [
-    {
+  {
     title: "Logi Integrated Farm",
     description:
       "A 20-acre integrated agriculture and animal breeding farm showcasing sustainable crop cultivation, livestock management, fish breeding, and modern farmhouse facilities. Includes a modern website to explore farm sections, specialties, and book tours.",
     image: IntegratedFarm,
-    tags: ["HTML", "Tailwind CSS", "JavaScript","React"],
+    tags: ["HTML", "Tailwind CSS", "JavaScript", "React"],
     category: "frontend",
     demoLink: " https://logi-integrated-farm.onrender.com",
     codeLink: "https://github.com/logapriyanm/Integrated-Farm.git"
   },
-    {
+  {
     title: "Orphanage Management System",
     description:
       "A responsive React.js + Tailwind CSS web application for a non-profit organization, featuring dynamic content, an interactive donation system, volunteer sign-up, and contact management to support child welfare initiatives.",
     image: Orphanage,
-    tags: ["HTML", "Tailwind CSS", "JavaScript","React"],
+    tags: ["HTML", "Tailwind CSS", "JavaScript", "React"],
     category: "frontend",
     demoLink: " https://orphanage-management-system-kxtd.onrender.com",
     codeLink: "https://github.com/logapriyanm/Orphanage-Management-System.git"
@@ -48,8 +48,8 @@ const projects = [
     description:
       "A modern online bookstore web app where users can browse, search, and explore books with a clean UI and responsive design.",
     image: BookBazaar,
-    tags: ["HTML","Tailwind CSS", "JavaScript","React"],
-    category: "frontend", 
+    tags: ["HTML", "Tailwind CSS", "JavaScript", "React"],
+    category: "frontend",
     demoLink: "https://book-bazaar-ovgc.onrender.com",
     codeLink: "https://github.com/logapriyanm/Book-Bazaar.git",
   },
@@ -59,7 +59,7 @@ const projects = [
     description:
       "A responsive web calculator built with  Supports keyboard input, handles real-time calculations, and blocks invalid characters. Designed for clean usability and smooth interaction.",
     image: Javascript2,
-    tags: ["HTML", "CSS","Javascript"],
+    tags: ["HTML", "CSS", "Javascript"],
     category: "frontend",
     demoLink: "https://logapriyanm.github.io/Calculator/",
     codeLink: "https://github.com/logapriyanm/Calculator"
@@ -67,9 +67,9 @@ const projects = [
   {
     title: "User Data",
     description:
-       "A full-stack CRUD application with React.js frontend and Node.js backend. It allows users to add, edit, delete, and search user records, with persistent data storage using JSON files.",
+      "A full-stack CRUD application with React.js frontend and Node.js backend. It allows users to add, edit, delete, and search user records, with persistent data storage using JSON files.",
     image: CrudApp,
-    tags: ["HTML", "Tailwind CSS","JavaScript","React","Node js","Express js" ],
+    tags: ["HTML", "Tailwind CSS", "JavaScript", "React", "Node js", "Express js"],
     category: "fullstack",
     demoLink: "https://user-data-frontend-gtb4.onrender.com/",
     codeLink: "https://github.com/logapriyanm/User-Data.git"
@@ -79,7 +79,7 @@ const projects = [
     description:
       "A responsive React-based weather application that displays real-time weather data, including temperature, humidity, wind speed, and location coordinates.",
     image: WeatherApp,
-    tags: ["HTML", "Tailwind CSS","JavaScript","React"],
+    tags: ["HTML", "Tailwind CSS", "JavaScript", "React"],
     category: "frontend",
     demoLink: "https://weather-app-loki.onrender.com",
     codeLink: "https://github.com/logapriyanm/Weather-App-Loki.git"
@@ -89,7 +89,7 @@ const projects = [
     description:
       "It features clean structure, bold typography, and a futuristic tech aesthetic—designed to impress and built to perform on all devices.",
     image: Html1,
-    tags: ["HTML","Bootstrap"],
+    tags: ["HTML", "Bootstrap"],
     category: "frontend",
     demoLink: " https://logapriyanm.github.io/LOKI-Technologies/",
     codeLink: "https://github.com/logapriyanm/LOKI-Technologies"
@@ -99,7 +99,7 @@ const projects = [
     description:
       "A sleek and modern landing page for a premium watch store, highlighting luxury, technology, and elegance. Built with HTML, CSS, and Bootstrap for a clean and engaging user experience.",
     image: Html,
-    tags: ["HTML","Bootstrap"],
+    tags: ["HTML", "Bootstrap"],
     category: "frontend",
     demoLink: "https://logapriyanm.github.io/Chrono-LOGI/",
     codeLink: "https://github.com/logapriyanm/Chrono-LOGI",
@@ -114,7 +114,7 @@ const projects = [
     demoLink: "https://logapriyanm.github.io/Pass-Generator/",
     codeLink: "https://github.com/logapriyanm/Pass-Generator.git",
   },
-  
+
 ];
 
 
@@ -147,11 +147,11 @@ const ProjectCard = ({ title, description, image, tags, demoLink, codeLink }) =>
     <div className="mt-4 flex flex-wrap gap-2 justify-center">
       {tags.map((tag, i) => (
         <span key={i} className="bg-blue-900 text-blue-200 px-3 py-1 rounded-full  text-sm">
-          {tag} 
+          {tag}
         </span>
       ))}
     </div>
-    
+
   </div>
 );
 
@@ -175,7 +175,7 @@ const Projects = () => {
     }
   };
 
- 
+
 
   const filteredProjects =
     selectedCategory === "all"
@@ -202,7 +202,7 @@ const Projects = () => {
 
 
 
-      
+
       {/* Swiper with double-hover zones */}
       <div className="relative md:max-w-[1200px] max-w-[300px]  mx-auto overflow-hidden">
         {/* Double Hover Left Zone */}
@@ -215,21 +215,20 @@ const Projects = () => {
         {/* Swiper */}
         <Swiper
           modules={[Navigation]}
-          navigation
+          navigation={filteredProjects.length > 1}
           grabCursor={true}
           spaceBetween={30}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          className="w-full"
+          slidesPerView={filteredProjects.length === 1 ? 1 : 3}
+          centeredSlides={filteredProjects.length === 1} // ✅ center when only 1 project
+          className="w-full flex justify-center"
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
+
+
+
           {filteredProjects.map((project, index) => (
             <SwiperSlide key={index}>
-              <div className="h-full  flex justify-center">
+              <div className={`h-full flex justify-center ${filteredProjects.length === 1 ? "max-w-[400px] mx-auto" : ""}`}>
                 <ProjectCard
                   title={project.title}
                   description={project.description}
@@ -241,6 +240,7 @@ const Projects = () => {
               </div>
             </SwiperSlide>
           ))}
+
         </Swiper>
 
         {/* Double Hover Right Zone */}
@@ -251,9 +251,9 @@ const Projects = () => {
       </div>
 
       <div className="m-10">
-       <a href="https://github.com/logapriyanm?tab=repositories">
-        <button className="px-3 py-2 hover:bg-blue-800 border-2 rounded-lg border-blue-700 cursor-pointer  text-white bg-blue-700 text-base md:text-xl font-primary font-medium">
-           View All Projects  </button></a>
+        <a href="https://github.com/logapriyanm?tab=repositories">
+          <button className="px-3 py-2 hover:bg-blue-800 border-2 rounded-lg border-blue-700 cursor-pointer  text-white bg-blue-700 text-base md:text-xl font-primary font-medium">
+            View All Projects  </button></a>
       </div>
 
     </div>
