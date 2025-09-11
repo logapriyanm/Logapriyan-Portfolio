@@ -10,6 +10,7 @@ import WeatherApp from '../assets/images/WeatherApp.png';
 import Orphanage from '../assets/images/Orphnage.png';
 import BookBazaar from "../assets/images/BookBazaar.png"
 import IntegratedFarm from "../assets/images/IntegratedFarm.png"
+import CrudApp from"../assets/images/CRUDAPP.png"
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
@@ -62,6 +63,16 @@ const projects = [
     category: "frontend",
     demoLink: "https://logapriyanm.github.io/Calculator/",
     codeLink: "https://github.com/logapriyanm/Calculator"
+  },
+  {
+    title: "User Data",
+    description:
+       "A full-stack CRUD application with React.js frontend and Node.js backend. It allows users to add, edit, delete, and search user records, with persistent data storage using JSON files.",
+    image: CrudApp,
+    tags: ["HTML", "Tailwind CSS","JavaScript","React","Node js","Express js" ],
+    category: "fullstack",
+    demoLink: "https://user-data-frontend-gtb4.onrender.com/",
+    codeLink: "https://github.com/logapriyanm/User-Data.git"
   },
   {
     title: "Weather App",
