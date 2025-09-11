@@ -1,26 +1,24 @@
-import { useState, useRef } from "react"
+import { useState, useRef } from "react";
 
 import Html from '../assets/images/Chronoloki.png';
 import Html1 from '../assets/images/lokitech.png';
-// import Html2 from '../assets/images/samport.png';
-// import Javascript from '../assets/images/stickynotels.png';
 import Javascript1 from '../assets/images/passgen.png';
 import Javascript2 from '../assets/images/Calculator.png';
 import WeatherApp from '../assets/images/WeatherApp.png';
 import Orphanage from '../assets/images/Orphnage.png';
-import BookBazaar from "../assets/images/BookBazaar.png"
-import IntegratedFarm from "../assets/images/IntegratedFarm.png"
-import CrudApp from "../assets/images/CRUDAPP.png"
+import BookBazaar from "../assets/images/BookBazaar.png";
+import IntegratedFarm from "../assets/images/IntegratedFarm.png";
+import CrudApp from "../assets/images/CRUDAPP.png";
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-
 import { Navigation } from 'swiper/modules';
 
 
+// ------------------- PROJECT DATA -------------------
 
 const projects = [
   {
@@ -53,7 +51,6 @@ const projects = [
     demoLink: "https://book-bazaar-ovgc.onrender.com",
     codeLink: "https://github.com/logapriyanm/Book-Bazaar.git",
   },
-
   {
     title: "Calculator",
     description:
@@ -114,17 +111,15 @@ const projects = [
     demoLink: "https://logapriyanm.github.io/Pass-Generator/",
     codeLink: "https://github.com/logapriyanm/Pass-Generator.git",
   },
-
 ];
 
 
-// Project Card component
+// ------------------- PROJECT CARD -------------------
 
 const ProjectCard = ({ title, description, image, tags, demoLink, codeLink }) => (
-  <div className="bg-[#334155] hover:bg-[#1f2937] rounded-xl overflow-hidden shadow-md p-4 flex flex-col sm:m-10 md:m-auto md:h-[450px] h-[500px]">
-
-    <div className="relative  w-full  group">
-      <img src={image} alt={title} className="rounded-lg w-full  object-cover md:h-[200px]" />
+  <div className="bg-[#334155] hover:bg-[#1f2937] rounded-xl overflow-hidden shadow-md p-4 flex flex-col h-[500px] md:h-[500px]">
+    <div className="relative w-full group">
+      <img src={image} alt={title} className="rounded-lg w-full object-cover md:h-[200px]" />
       <div className="absolute inset-0 bg-blue-400 hover:rounded flex justify-center items-center gap-4 opacity-0 group-hover:opacity-70 transition-opacity duration-300">
         {demoLink && (
           <a href={demoLink} target="_blank" rel="noopener noreferrer">
@@ -143,39 +138,29 @@ const ProjectCard = ({ title, description, image, tags, demoLink, codeLink }) =>
       </div>
     </div>
     <h3 className="text-white text-xl text-center font-semibold mt-4">{title}</h3>
-    <p className="text-gray-300 mt-2 flex-1 text-center md:font-extra font-primary ">{description}</p>
+    <p className="text-gray-300 mt-2 flex-1 text-center">{description}</p>
     <div className="mt-4 flex flex-wrap gap-2 justify-center">
       {tags.map((tag, i) => (
-        <span key={i} className="bg-blue-900 text-blue-200 px-3 py-1 rounded-full  text-sm">
+        <span key={i} className="bg-blue-900 text-blue-200 px-3 py-1 rounded-full text-sm">
           {tag}
         </span>
       ))}
     </div>
-
   </div>
 );
 
 
-// Projects head
+// ------------------- MAIN PROJECTS COMPONENT -------------------
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
-
   const swiperRef = useRef(null);
 
   const slideOnce = (direction) => {
     if (!swiperRef.current) return;
-
     const swiper = swiperRef.current;
-
-    if (direction === "left") {
-      swiper.slidePrev();
-    } else {
-      swiper.slideNext();
-    }
+    direction === "left" ? swiper.slidePrev() : swiper.slideNext();
   };
-
-
 
   const filteredProjects =
     selectedCategory === "all"
@@ -183,83 +168,87 @@ const Projects = () => {
       : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <div id="projects" className="min-h-screen bg-gradient-to-r flex flex-col items-center from-primary to-secondary py-10">
-      <h1 className="md:text-4xl text-3xl font-bold text-white md:font-extra font-poppins text-center md:m-15 mb-4">Projects</h1>
+    <div id="projects" className="min-h-screen bg-gradient-to-r from-primary to-secondary py-10 flex flex-col items-center">
+      <h1 className="md:text-4xl text-3xl font-bold text-white text-center mb-4">Projects</h1>
 
       {/* Filter Buttons */}
-      <div className="grid md:flex justify-center gap-4 mb-10  text-white font-medium">
+      <div className="grid md:flex justify-center gap-4 mb-10 text-white font-medium">
         {["all", "fullstack", "frontend", "backend"].map((cat) => (
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
-            className={`px-4 py-2 rounded-md cursor-pointer transition-all duration-200 ${selectedCategory === cat ? "bg-blue-500 text-white" : "hover:text-blue-300"
-              }`}
+            className={`px-4 py-2 rounded-md cursor-pointer transition-all duration-200 ${
+              selectedCategory === cat ? "bg-blue-500 text-white" : "hover:text-blue-300"
+            }`}
           >
             {cat.charAt(0).toUpperCase() + cat.slice(1)}
           </button>
         ))}
       </div>
 
+      {/* Projects Display */}
+      <div className="relative md:max-w-[1200px] max-w-[300px] mx-auto overflow-hidden">
+        {filteredProjects.length > 1 ? (
+          <>
+            {/* Left Hover Zone */}
+            <div
+              onClick={() => slideOnce("left")}
+              className="absolute left-0 top-0 h-full w-[50px] z-10 cursor-w-resize"
+            />
 
+            {/* Swiper */}
+            <Swiper
+              modules={[Navigation]}
+              navigation
+              grabCursor={true}
+              spaceBetween={30}
+              slidesPerView={1}
+              breakpoints={{
+                640: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+              }}
+              className="w-full"
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+            >
+              {filteredProjects.map((project, index) => (
+                <SwiperSlide key={index}>
+                  <div className="h-full flex justify-center">
+                    <ProjectCard {...project} />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
-
-      {/* Swiper with double-hover zones */}
-      <div className="relative md:max-w-[1200px] max-w-[300px]  mx-auto overflow-hidden">
-        {/* Double Hover Left Zone */}
-        <div
-          onClick={() => slideOnce("left")}
-          className="absolute left-0 top-0 h-full w-[50px] z-10 cursor-w-resize"
-        />
-
-
-        {/* Swiper */}
-        <Swiper
-          modules={[Navigation]}
-          navigation={filteredProjects.length > 1}
-          grabCursor={true}
-          spaceBetween={30}
-          slidesPerView={filteredProjects.length === 1 ? 1 : 3}
-          centeredSlides={filteredProjects.length === 1} // ✅ center when only 1 project
-          className="w-full flex justify-center"
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
-        >
-
-
-
-          {filteredProjects.map((project, index) => (
-            <SwiperSlide key={index}>
-              <div className={`h-full flex justify-center ${filteredProjects.length === 1 ? "max-w-[400px] mx-auto" : ""}`}>
-                <ProjectCard
-                  title={project.title}
-                  description={project.description}
-                  image={project.image}
-                  tags={project.tags}
-                  demoLink={project.demoLink}
-                  codeLink={project.codeLink}
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-
-        </Swiper>
-
-        {/* Double Hover Right Zone */}
-        <div
-          onClick={() => slideOnce("right")}
-          className="absolute right-0 top-0 h-full w-[50px] z-10 cursor-pointer"
-        />
+            {/* Right Hover Zone */}
+            <div
+              onClick={() => slideOnce("right")}
+              className="absolute right-0 top-0 h-full w-[50px] z-10 cursor-pointer"
+            />
+          </>
+        ) : filteredProjects.length === 1 ? (
+          // ✅ Single project (controlled width, centered)
+          <div className="flex justify-center">
+            <div className="max-w-[400px] w-full">
+              <ProjectCard {...filteredProjects[0]} />
+            </div>
+          </div>
+        ) : (
+          // ✅ No projects
+          <p className="text-white text-lg text-center">No projects found in this category.</p>
+        )}
       </div>
 
+      {/* View All Projects Button */}
       <div className="m-10">
         <a href="https://github.com/logapriyanm?tab=repositories">
-          <button className="px-3 py-2 hover:bg-blue-800 border-2 rounded-lg border-blue-700 cursor-pointer  text-white bg-blue-700 text-base md:text-xl font-primary font-medium">
-            View All Projects  </button></a>
+          <button className="px-3 py-2 hover:bg-blue-800 border-2 rounded-lg border-blue-700 cursor-pointer text-white bg-blue-700 text-base md:text-xl font-medium">
+            View All Projects
+          </button>
+        </a>
       </div>
-
     </div>
-
   );
-
 };
 
 export default Projects;
