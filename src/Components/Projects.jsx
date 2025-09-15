@@ -176,7 +176,7 @@ const Projects = () => {
       : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <div id="projects" className="min-h-screen bg-gradient-to-r from-primary to-secondary py-10 flex flex-col items-center">
+    <div id="projects" className="min-h-screen bg-gradient-to-r from-primary to-secondary p-10 flex flex-col items-center">
       <h1 className="md:text-4xl text-3xl font-bold text-white text-center mb-4">Projects</h1>
 
       {/* Filter Buttons */}
