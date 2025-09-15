@@ -9,6 +9,7 @@ import Orphanage from '../assets/images/Orphnage.png';
 import BookBazaar from "../assets/images/BookBazaar.png";
 import IntegratedFarm from "../assets/images/IntegratedFarm.png";
 import CrudApp from "../assets/images/CRUDAPP.png";
+import BlogImage from "../assets/images/BlogImage.png";
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
@@ -17,18 +18,17 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
-
 // ------------------- PROJECT DATA -------------------
 
 const projects = [
   {
     title: "Logi Integrated Farm",
     description:
-      "A 20-acre integrated agriculture and animal breeding farm showcasing sustainable crop cultivation, livestock management, fish breeding, and modern farmhouse facilities. Includes a modern website to explore farm sections, specialties, and book tours.",
+       " Enhanced my skills in building responsive layouts, managing state, and integrating interactive features. This project demonstrates my ability to create modern interfaces and deliver seamless user experiences for clients in the agriculture sector.",
     image: IntegratedFarm,
     tags: ["HTML", "Tailwind CSS", "JavaScript", "React"],
     category: "frontend",
-    demoLink: " https://logi-integrated-farm.onrender.com",
+    demoLink: "https://logi-integrated-farm.onrender.com",
     codeLink: "https://github.com/logapriyanm/Integrated-Farm.git"
   },
   {
@@ -38,25 +38,35 @@ const projects = [
     image: Orphanage,
     tags: ["HTML", "Tailwind CSS", "JavaScript", "React"],
     category: "frontend",
-    demoLink: " https://orphanage-management-system-kxtd.onrender.com",
+    demoLink: "https://orphanage-management-system-kxtd.onrender.com",
     codeLink: "https://github.com/logapriyanm/Orphanage-Management-System.git"
+  },
+  {
+    title: "MERN Blog Website",
+    description:
+      "A full-stack blog platform built using MongoDB, Express.js, React, and Node.js. Features include category management, post creation, dynamic content rendering.",
+    image: BlogImage,
+    tags: ["MongoDB", "Express.js", "React", "Node.js", "REST API"],
+    category: "fullstack",
+    demoLink: "https://blog-mern-frontend-ujkd.onrender.com",
+    codeLink: "https://github.com/logapriyanm/Blog-MERN.git"
   },
   {
     title: "Book Bazaar",
     description:
-      "A modern online bookstore web app where users can browse, search, and explore books with a clean UI and responsive design.",
+     "Developed a modern and interactive online bookstore where users can seamlessly browse, search, and discover books.  It reflects my understanding of frontend architecture, user experience design, and component-based development.",
     image: BookBazaar,
     tags: ["HTML", "Tailwind CSS", "JavaScript", "React"],
     category: "frontend",
     demoLink: "https://book-bazaar-ovgc.onrender.com",
-    codeLink: "https://github.com/logapriyanm/Book-Bazaar.git",
+    codeLink: "https://github.com/logapriyanm/Book-Bazaar.git"
   },
   {
     title: "Calculator",
     description:
-      "A responsive web calculator built with  Supports keyboard input, handles real-time calculations, and blocks invalid characters. Designed for clean usability and smooth interaction.",
+      "A responsive web calculator built with Supports keyboard input, handles real-time calculations, and blocks invalid characters. Designed for clean usability and smooth interaction.",
     image: Javascript2,
-    tags: ["HTML", "CSS", "Javascript"],
+    tags: ["HTML", "CSS", "JavaScript"],
     category: "frontend",
     demoLink: "https://logapriyanm.github.io/Calculator/",
     codeLink: "https://github.com/logapriyanm/Calculator"
@@ -88,7 +98,7 @@ const projects = [
     image: Html1,
     tags: ["HTML", "Bootstrap"],
     category: "frontend",
-    demoLink: " https://logapriyanm.github.io/LOKI-Technologies/",
+    demoLink: "https://logapriyanm.github.io/LOKI-Technologies/",
     codeLink: "https://github.com/logapriyanm/LOKI-Technologies"
   },
   {
@@ -99,20 +109,19 @@ const projects = [
     tags: ["HTML", "Bootstrap"],
     category: "frontend",
     demoLink: "https://logapriyanm.github.io/Chrono-LOGI/",
-    codeLink: "https://github.com/logapriyanm/Chrono-LOGI",
+    codeLink: "https://github.com/logapriyanm/Chrono-LOGI"
   },
   {
     title: "Password Generator",
     description:
       "A simple yet powerful JavaScript-based password generator that lets users customize password length and include numbers, capital/small letters, and symbols.",
     image: Javascript1,
-    tags: ["HTMl", "CSS", "Javascript"],
+    tags: ["HTML", "CSS", "JavaScript"],
     category: "frontend",
     demoLink: "https://logapriyanm.github.io/Pass-Generator/",
-    codeLink: "https://github.com/logapriyanm/Pass-Generator.git",
+    codeLink: "https://github.com/logapriyanm/Pass-Generator.git"
   },
 ];
-
 
 // ------------------- PROJECT CARD -------------------
 
@@ -137,8 +146,8 @@ const ProjectCard = ({ title, description, image, tags, demoLink, codeLink }) =>
         )}
       </div>
     </div>
-    <h3 className="text-white text-xl text-center font-semibold mt-4">{title}</h3>
-    <p className="text-gray-300 mt-2 flex-1 text-center">{description}</p>
+    <h3 className="text-white text-lg text-center font-poppins font-semibold mt-4">{title}</h3>
+    <p className="text-gray-300 mt-4 flex-1 text-center ">{description}</p>
     <div className="mt-4 flex flex-wrap gap-2 justify-center">
       {tags.map((tag, i) => (
         <span key={i} className="bg-blue-900 text-blue-200 px-3 py-1 rounded-full text-sm">
@@ -148,7 +157,6 @@ const ProjectCard = ({ title, description, image, tags, demoLink, codeLink }) =>
     </div>
   </div>
 );
-
 
 // ------------------- MAIN PROJECTS COMPONENT -------------------
 
@@ -187,7 +195,7 @@ const Projects = () => {
       </div>
 
       {/* Projects Display */}
-      <div className="relative md:max-w-[1200px] max-w-[300px] mx-auto overflow-hidden">
+      <div className="relative container mx-auto px-4 overflow-hidden">
         {filteredProjects.length > 1 ? (
           <>
             {/* Left Hover Zone */}
