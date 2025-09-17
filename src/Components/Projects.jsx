@@ -10,6 +10,7 @@ import BookBazaar from "../assets/images/BookBazaar.png";
 import IntegratedFarm from "../assets/images/IntegratedFarm.png";
 import CrudApp from "../assets/images/CRUDAPP.png";
 import BlogImage from "../assets/images/BlogImage.png";
+import ContactManagement from "../assets/images/ContactMERN.png"
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
@@ -31,6 +32,17 @@ const projects = [
     demoLink: "https://logi-integrated-farm.onrender.com",
     codeLink: "https://github.com/logapriyanm/Integrated-Farm.git"
   },
+  {
+  title: "Contact Management System",
+  description:
+    "Built a MERN stack contact management system with CRUD operations, search, and filtering. This project showcases my skills in full-stack development and creating efficient user interfaces.",
+  image: ContactManagement,
+  tags: [" React", "Express", "MongoDB", "Node.js", "Tailwind CSS"],
+  category: "fullstack",
+  demoLink: "https://contact-management-mern.onrender.com",
+  codeLink: "https://github.com/logapriyanm/Contact-Management-MERN.git"
+},
+
   {
     title: "Orphanage Management System",
     description:
