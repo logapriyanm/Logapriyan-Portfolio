@@ -193,7 +193,7 @@ const Projects = () => {
 
       {/* Filter Buttons */}
       <div className="grid md:flex justify-center gap-4 mb-10 text-white font-medium">
-        {["all", "fullstack", "frontend", "backend"].map((cat) => (
+        {["all", "fullstack", "frontend"].map((cat) => (
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
