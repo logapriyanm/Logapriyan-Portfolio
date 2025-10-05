@@ -11,7 +11,7 @@ import ProjectsData from "../Datas/ProjectsData";
 // ------------------- PROJECT CARD -------------------
 
 const ProjectCard = ({ title, description, image, tags, demoLink, codeLink }) => (
-  <div className="bg-[#334155] hover:bg-[#1f2937] rounded-xl overflow-hidden shadow-md p-4 flex flex-col h-[500px] md:h-[500px]">
+  <div className="bg-[#334155] hover:bg-[#1f2937] rounded-xl overflow-hidden shadow-md p-4 flex flex-col h-[580px]  md:h-[500px] lg:h-[520px]">
     <div className="relative w-full group">
       <img src={image} alt={title} className="rounded-lg w-full object-cover md:h-[200px]" />
       <div className="absolute inset-0 bg-blue-400 hover:rounded flex justify-center items-center gap-4 opacity-0 group-hover:opacity-70 transition-opacity duration-300">

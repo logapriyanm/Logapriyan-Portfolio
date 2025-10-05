@@ -11,6 +11,7 @@ import CrudApp from "../assets/images/CRUDAPP.png";
 import BlogImage from "../assets/images/BlogImage.png";
 import ContactManagement from "../assets/images/ContactMERN.png"
 import TodoImage from "../assets/images/TodoImage.png"
+import QuickChat from "../assets/images/QuickChat.png"
 
 
 const projects = [
@@ -23,6 +24,16 @@ const projects = [
     category: "frontend",
     demoLink: "https://logi-integrated-farm.onrender.com",
     codeLink: "https://github.com/logapriyanm/Integrated-Farm.git"
+  },
+  {
+    title: "RealTime Chat App",
+    description:
+       "This project allowed me to explore full-stack development by building a chat app with React, Node.js, MongoDB, and Socket.io. I gained hands-on experience in authentication, state management, and creating seamless, responsive user experiences.",
+    image:QuickChat ,
+    tags: ["HTML", "Tailwind CSS", "JavaScript", "React", "Node.js", "MongoDB", "Express.js","Socket.io"],
+    category: "fullstack",
+    demoLink: "https://quickchat-app-5q8p.onrender.com",
+    codeLink: "https://github.com/logapriyanm/CHAT-APP.git"
   },
   {
   title: "Contact Management System",
